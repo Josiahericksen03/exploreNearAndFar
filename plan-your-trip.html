@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plan Your Trip | Explore Near &amp; Far Travel</title>
+  <meta name="description" content="Contact Explore Near &amp; Far Travel — tell us about your trip and Faith or Rob will follow up.">
+  <link rel="icon" href="assets/logo-explore-near-and-far.png" type="image/png">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-top">
+      <a class="brand" href="index.html">
+        <img class="brand-logo" src="assets/logo-explore-near-and-far.png" width="68" height="68" alt="">
+        <span class="brand-text">
+          <span class="brand-name">Explore Near &amp; Far Travel</span>
+          <span class="brand-slogan">Extraordinary Memories. Thoughtful details. Travel Designed for you.</span>
+        </span>
+      </a>
+      <div class="header-contact" aria-label="Contact">
+        <span class="header-contact-meta">Faith &amp; Rob Ericksen · Orlando, Florida</span>
+        <a href="tel:+14075080990">407-508-0990</a>
+        <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a>
+      </div>
+      </div>
+      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="main-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cruises.html">Cruises</a></li>
+          <li><a href="land-vacations.html">Land Vacations</a></li>
+          <li><a href="destination-weddings.html">Wedding Travel</a></li>
+          <li><a href="senior-travel.html">Senior Travel</a></li>
+          <li><a href="accessible-travel.html">Accessible Travel</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="plan-your-trip.html" aria-current="page" class="btn btn-primary btn-nav">Plan Your Trip</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main id="main">
+    <div class="page-hero page-hero--photo page-hero--plan">
+      <div class="page-hero-inner">
+        <h1>Plan your trip</h1>
+        <p>A few details help us respond with useful ideas — usually within one business day.</p>
+      </div>
+    </div>
+    <section class="section section-wash">
+      <div class="section-inner split">
+        <div class="form-panel">
+          <div id="form-status" class="prose" tabindex="-1" role="status" aria-live="polite"></div>
+          <form id="trip-form" action="#" method="post" novalidate>
+            <div class="form-group" data-required>
+              <label for="name">Your name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+              <p class="form-error">Please enter your name.</p>
+            </div>
+            <div class="form-group" data-required>
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <p class="form-error">Please enter a valid email address.</p>
+            </div>
+            <div class="form-group">
+              <label for="phone">Phone (optional)</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel">
+            </div>
+            <div class="form-group" data-required>
+              <label for="trip-type">What are you planning?</label>
+              <select id="trip-type" name="trip-type" required>
+                <option value="">Choose one…</option>
+                <option value="wedding">Wedding travel</option>
+                <option value="senior">Senior travel</option>
+                <option value="accessible">Accessible travel</option>
+                <option value="cruise">Cruise</option>
+                <option value="land">Land vacation</option>
+                <option value="other">Other vacation</option>
+              </select>
+              <p class="form-error">Please select a trip type.</p>
+            </div>
+            <div class="form-group" data-required>
+              <label for="message">Tell us about your trip</label>
+              <textarea id="message" name="message" required placeholder="Dates, number of travelers, destinations you’re considering, accessibility needs…"></textarea>
+              <p class="form-error">Please share a few details so we can help.</p>
+            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
+          </form>
+        </div>
+        <div>
+          <div class="prose">
+            <h2>Prefer to talk?</h2>
+            <p><a href="tel:+14075080990">407-508-0990</a><br>
+            <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a></p>
+            <p>Same contact info as Faith’s current <a href="https://travelagentconnection.com/?agent=20050112" rel="noopener noreferrer">Travel Agent Connection</a> profile — we’ll point the domain here when the new site launches.</p>
+            <p><strong>Service area:</strong> Orlando, Florida and travelers nationwide.</p>
+            <p>There is no charge for our planning services; we are compensated by travel partners when you book.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer class="site-footer"><p class="footer-bottom">&copy; Explore Near &amp; Far Travel, LLC · <a href="accessibility.html">Accessibility</a></p></footer>
+  <script src="js/reveal.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

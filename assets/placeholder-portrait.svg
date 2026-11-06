@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="750" viewBox="0 0 600 750" role="img" aria-label="Portrait placeholder">
+  <rect width="600" height="750" fill="#163D5A"/>
+  <ellipse cx="300" cy="260" rx="110" ry="120" fill="#78C6D0"/>
+  <path d="M120 720 Q300 520 480 720 L480 750 H120Z" fill="#F5C451"/>
+  <text x="300" y="680" text-anchor="middle" fill="#FFF8EE" font-family="system-ui,sans-serif" font-size="20">Advisor photo</text>
+</svg>
