@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="service">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plan Your Trip | Explore Near &amp; Far Travel</title>
   <meta name="description" content="Contact Explore Near &amp; Far Travel — tell us about your trip and Faith or Rob will follow up.">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
   <link rel="icon" href="assets/logo-explore-near-and-far.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,7 +19,6 @@
         <img class="brand-logo" src="assets/logo-explore-near-and-far.png" width="68" height="68" alt="">
         <span class="brand-text">
           <span class="brand-name">Explore Near &amp; Far Travel</span>
-          <span class="brand-slogan">Extraordinary Memories. Thoughtful details. Travel Designed for you.</span>
         </span>
       </a>
       <div class="header-contact" aria-label="Contact">
@@ -43,14 +44,14 @@
     </div>
   </header>
   <main id="main">
-    <div class="page-hero page-hero--photo page-hero--plan">
-      <div class="page-hero-inner">
+    <header class="page-intro">
+      <div class="page-intro-inner">
         <h1>Plan your trip</h1>
-        <p>A few details help us respond with useful ideas — usually within one business day.</p>
+        <p class="lead">A few details help us reply with useful ideas — usually within one business day. There is no charge for planning; travel partners compensate us when you book.</p>
       </div>
-    </div>
-    <section class="section section-wash">
-      <div class="section-inner split">
+    </header>
+    <section class="section">
+      <div class="section-inner split split--top">
         <div class="form-panel">
           <div id="form-status" class="prose" tabindex="-1" role="status" aria-live="polite"></div>
           <form id="trip-form" action="#" method="post" novalidate>
@@ -90,20 +91,53 @@
           </form>
         </div>
         <div>
+          <div class="media-frame media-frame--aside">
+            <img src="assets/faith-virgin-voyages-cabin.png" alt="Faith Ericksen in a Virgin Voyages cabin">
+          </div>
           <div class="prose">
             <h2>Prefer to talk?</h2>
             <p><a href="tel:+14075080990">407-508-0990</a><br>
             <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a></p>
             <p>Same contact info as Faith’s current <a href="https://travelagentconnection.com/?agent=20050112" rel="noopener noreferrer">Travel Agent Connection</a> profile — we’ll point the domain here when the new site launches.</p>
-            <p><strong>Service area:</strong> Orlando, Florida and travelers nationwide.</p>
-            <p>There is no charge for our planning services; we are compensated by travel partners when you book.</p>
+            <p>Service area: Orlando, Florida and travelers nationwide.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
-  <footer class="site-footer"><p class="footer-bottom">&copy; Explore Near &amp; Far Travel, LLC · <a href="accessibility.html">Accessibility</a></p></footer>
-  <script src="js/reveal.js"></script>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Explore Near &amp; Far Travel, LLC</h2>
+        <p>Orlando, Florida<br>Personal travel advisors serving travelers near and far</p>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <p><a href="tel:+14075080990">407-508-0990</a><br>
+        <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a><br>
+        <a href="plan-your-trip.html">Contact form</a></p>
+      </div>
+      <div>
+        <h2>Travel</h2>
+        <p>
+          <a href="cruises.html">Cruises</a><br>
+          <a href="land-vacations.html">Land vacations</a><br>
+          <a href="destination-weddings.html">Wedding travel</a><br>
+          <a href="senior-travel.html">Senior travel</a><br>
+          <a href="accessible-travel.html">Accessible travel</a>
+        </p>
+      </div>
+      <div>
+        <h2>The firm</h2>
+        <p>
+          <a href="about.html">About Faith &amp; Rob</a><br>
+          <a href="reviews.html">Reviews</a><br>
+          <a href="accessibility.html">Accessibility statement</a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span class="js-year"></span> Explore Near &amp; Far Travel, LLC. Mockup site for design review.</p>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>

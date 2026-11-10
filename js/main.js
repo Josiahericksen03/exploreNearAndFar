@@ -1,4 +1,8 @@
 (function () {
+  document.querySelectorAll(".js-year").forEach(function (el) {
+    el.textContent = new Date().getFullYear();
+  });
+
   var toggle = document.querySelector(".nav-toggle");
   var nav = document.querySelector(".main-nav");
   if (toggle && nav) {
@@ -45,5 +49,8 @@
         "Thank you — this is a mockup, so nothing was sent. On the live site, Faith and Rob will reach out within one business day.";
     }
     form.reset();
+    if (tripSelect && tripParam && tripSelect.querySelector('option[value="' + tripParam + '"]')) {
+      tripSelect.value = tripParam;
+    }
   });
 })();

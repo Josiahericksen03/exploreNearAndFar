@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-type="service">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Land Vacations | Explore Near &amp; Far Travel</title>
   <meta name="description" content="Land vacations planned by personal travel advisors in Orlando — resorts, guided tours, family trips, and city stays.">
+  <meta name="page-type" content="service">
+  <meta name="site-kind" content="other">
   <link rel="icon" href="assets/logo-explore-near-and-far.png" type="image/png">
   <link rel="stylesheet" href="css/styles.css">
 </head>
@@ -17,7 +19,6 @@
         <img class="brand-logo" src="assets/logo-explore-near-and-far.png" width="68" height="68" alt="">
         <span class="brand-text">
           <span class="brand-name">Explore Near &amp; Far Travel</span>
-          <span class="brand-slogan">Extraordinary Memories. Thoughtful details. Travel Designed for you.</span>
         </span>
       </a>
       <div class="header-contact" aria-label="Contact">
@@ -43,25 +44,27 @@
     </div>
   </header>
   <main id="main">
-    <div class="page-hero page-hero--video page-hero--video-land" aria-label="Land vacations">
-      <video class="page-hero-video" autoplay muted loop playsinline poster="assets/destination-amsterdam-tulips.png" aria-hidden="true">
+    <div class="page-hero page-hero--video page-hero--video-land" aria-hidden="true">
+      <video class="page-hero-video" autoplay muted loop playsinline poster="assets/destination-amsterdam-tulips.png">
         <source src="assets/hero-land-vacations.mp4" type="video/mp4">
       </video>
-      <div class="page-hero-inner">
-        <h1 class="sr-only">Land vacations</h1>
-      </div>
     </div>
-    <section class="section section-wash">
+    <header class="page-intro">
+      <div class="page-intro-inner">
+        <h1>Land vacations</h1>
+        <p class="lead">Resorts, guided tours, family trips, and city stays — planned around how you actually like to travel, not a cruise schedule.</p>
+      </div>
+    </header>
+    <section class="section">
       <div class="section-inner split">
         <div class="prose">
-          <p>Not every trip belongs at sea. We plan land vacations that match how you actually like to travel — a week at a resort, a guided tour with time in the cities you care about, or a family trip that isn’t built around a cruise schedule.</p>
+          <p>Not every trip belongs at sea. We book the room type that matches the stay, keep pacing realistic, and stay the contact if something changes on the ground.</p>
           <ul class="feature-list">
             <li>All-inclusive resorts and hotel stays with the right room type, not just the brochure rate</li>
-            <li>Guided tours and independent itineraries with realistic pacing</li>
+            <li>Guided tours and independent itineraries with time in the cities you care about</li>
             <li>Family and group travel with rooms, transfers, and downtime planned together</li>
-            <li>One contact for the whole trip — Faith or Rob — if something changes on the ground</li>
           </ul>
-          <p><a class="btn btn-primary" href="plan-your-trip.html?trip=land">Plan a land vacation</a></p>
+          <p class="actions"><a class="btn btn-primary" href="plan-your-trip.html?trip=land">Plan a land vacation</a></p>
         </div>
         <div class="media-stack">
           <div class="media-frame">
@@ -73,9 +76,45 @@
         </div>
       </div>
     </section>
+    <section class="cta-band" aria-labelledby="cta-heading">
+      <h2 id="cta-heading">Tell us the trip on land</h2>
+      <p>Dates, who is going, and the kind of stay you want. We’ll reply with options.</p>
+      <p class="actions actions--loose"><a class="btn btn-primary" href="plan-your-trip.html?trip=land">Plan your trip</a></p>
+    </section>
   </main>
-  <footer class="site-footer"><p class="footer-bottom">&copy; Explore Near &amp; Far Travel, LLC · <a href="accessibility.html">Accessibility</a></p></footer>
-  <script src="js/reveal.js"></script>
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div>
+        <h2>Explore Near &amp; Far Travel, LLC</h2>
+        <p>Orlando, Florida<br>Personal travel advisors serving travelers near and far</p>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <p><a href="tel:+14075080990">407-508-0990</a><br>
+        <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a><br>
+        <a href="plan-your-trip.html">Contact form</a></p>
+      </div>
+      <div>
+        <h2>Travel</h2>
+        <p>
+          <a href="cruises.html">Cruises</a><br>
+          <a href="land-vacations.html">Land vacations</a><br>
+          <a href="destination-weddings.html">Wedding travel</a><br>
+          <a href="senior-travel.html">Senior travel</a><br>
+          <a href="accessible-travel.html">Accessible travel</a>
+        </p>
+      </div>
+      <div>
+        <h2>The firm</h2>
+        <p>
+          <a href="about.html">About Faith &amp; Rob</a><br>
+          <a href="reviews.html">Reviews</a><br>
+          <a href="accessibility.html">Accessibility statement</a>
+        </p>
+      </div>
+    </div>
+    <p class="footer-bottom">&copy; <span class="js-year"></span> Explore Near &amp; Far Travel, LLC. Mockup site for design review.</p>
+  </footer>
   <script src="js/main.js"></script>
 </body>
 </html>
