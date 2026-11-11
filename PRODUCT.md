@@ -31,13 +31,14 @@ You talk to Faith or Rob from the first idea through disruptions. There is no fe
 
 ## Constraints
 
-- Brand palette stays `#163D5A #78C6D0 #F47A38 #F5C451 #FFF8EE #2D3338`
+- Brand colors available for use (not required as page chrome): `#163D5A #78C6D0 #F47A38 #F5C451 #FFF8EE #2D3338`
 - Nav order: Home, About, Cruises, Land Vacations, Wedding Travel, Senior Travel, Accessible Travel, Reviews, Plan Your Trip
-- Video heroes stay looping, muted, no extra overlay text
-- White header with navy contact text (no navy top bar)
+- Service page heroes may use the looping muted videos already in assets
 - Reviews keep the side-slide chapter scroller; first review visible on load
-- WCAG 2.1 AA target; senior and accessible audiences need readable type
+- WCAG 2.1 AA target; senior and accessible audiences need readable type (17px+ body)
 - Do not invent awards, review counts, or client names
+- Logo and real photographs/videos from assets must lead; no stock filler
+- Complete visual overhaul authorized: prior header/chrome treatments are not locked
 
 ## Voice
 

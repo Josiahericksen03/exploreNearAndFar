@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Plan Your Trip | Explore Near &amp; Far Travel</title>
-  <meta name="description" content="Tell Faith and Rob Ericksen about your trip. Orlando travel advisors reply within one business day. No planning fee.">
+  <meta name="description" content="Contact Explore Near &amp; Far Travel — tell us about your trip and Faith or Rob will follow up.">
   <meta name="page-type" content="service">
   <meta name="site-kind" content="other">
   <link rel="icon" href="assets/logo-explore-near-and-far.png" type="image/png">
@@ -12,142 +12,130 @@
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
-  <header class="masthead">
-    <div class="col masthead-inner">
-      <a class="brand" href="index.html">
-        <img class="brand-logo" src="assets/logo-explore-near-and-far.png" width="56" height="56" alt="">
-        <span>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="header-top">
+        <a class="brand" href="index.html">
+          <img class="brand-logo" src="assets/logo-explore-near-and-far.png" width="68" height="68" alt="">
           <span class="brand-name">Explore Near &amp; Far Travel</span>
-          <span class="brand-sub">Faith &amp; Rob Ericksen, Orlando, Florida</span>
-        </span>
-      </a>
-      <div class="masthead-contact">
-        <a class="email" href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a>
-        <a class="phone" href="tel:+14075080990">407-508-0990</a>
+        </a>
+        <div class="header-contact" aria-label="Contact">
+          <span class="header-contact-meta">Faith &amp; Rob Ericksen · Orlando</span>
+          <a href="tel:+14075080990">407-508-0990</a>
+          <a href="mailto:explorenearandfartravel@gmail.com">Email</a>
+        </div>
+        <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
       </div>
-      <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav">Menu</button>
+      <nav class="main-nav" id="site-nav" aria-label="Primary">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="cruises.html">Cruises</a></li>
+          <li><a href="land-vacations.html">Land Vacations</a></li>
+          <li><a href="destination-weddings.html">Yes to I Do</a></li>
+          <li><a href="senior-travel.html">Senior Travel</a></li>
+          <li><a href="accessible-travel.html">Accessible Travel</a></li>
+          <li><a href="reviews.html">Reviews</a></li>
+          <li><a href="plan-your-trip.html" aria-current="page" class="btn btn-primary btn-nav">Plan Your Trip</a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-  <nav class="site-nav" id="site-nav" aria-label="Primary">
-    <ul class="col">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="cruises.html">Cruises</a></li>
-      <li><a href="land-vacations.html">Land Vacations</a></li>
-      <li><a href="destination-weddings.html">Wedding Travel</a></li>
-      <li><a href="senior-travel.html">Senior Travel</a></li>
-      <li><a href="accessible-travel.html">Accessible Travel</a></li>
-      <li><a href="reviews.html">Reviews</a></li>
-      <li><a href="plan-your-trip.html" aria-current="page" class="btn btn-primary">Plan Your Trip</a></li>
-    </ul>
-  </nav>
-
   <main id="main">
-    <section class="section section--water" aria-labelledby="plan-heading">
-      <div class="col">
-        <div class="section-head">
-          <h1 id="plan-heading" class="display" style="font-size:clamp(2.4rem,5vw,3.75rem)">Plan your trip</h1>
-          <p>A few details help us reply with useful options — usually within one business day. There is no planning fee; travel partners compensate us when you book.</p>
-        </div>
-        <div class="split split--top">
-          <form id="trip-form" class="form" action="#" method="post" novalidate>
-            <div id="form-status" class="form-status" tabindex="-1" role="status" aria-live="polite"></div>
-            <div class="field" data-required>
+    <header class="page-intro">
+      <div class="page-intro-inner">
+        <h1>Plan your trip</h1>
+        <p class="lead">A few details help us reply with useful ideas — usually within one business day. There is no charge for planning; travel partners compensate us when you book.</p>
+      </div>
+    </header>
+    <section class="paper">
+      <div class="paper-inner split split--top">
+        <div class="form-panel">
+          <div id="form-status" class="prose" tabindex="-1" role="status" aria-live="polite"></div>
+          <form id="trip-form" action="#" method="post" novalidate>
+            <div class="form-group" data-required>
               <label for="name">Your name</label>
               <input type="text" id="name" name="name" autocomplete="name" required>
-              <p class="field-error">Please enter your name.</p>
+              <p class="form-error">Please enter your name.</p>
             </div>
-            <div class="field" data-required>
+            <div class="form-group" data-required>
               <label for="email">Email</label>
               <input type="email" id="email" name="email" autocomplete="email" required>
-              <p class="field-error">Please enter an email address we can reply to.</p>
+              <p class="form-error">Please enter a valid email address.</p>
             </div>
-            <div class="field">
+            <div class="form-group">
               <label for="phone">Phone (optional)</label>
               <input type="tel" id="phone" name="phone" autocomplete="tel">
             </div>
-            <div class="field" data-required>
+            <div class="form-group" data-required>
               <label for="trip-type">What are you planning?</label>
               <select id="trip-type" name="trip-type" required>
-                <option value="">Choose one</option>
-                <option value="cruise">Cruise</option>
-                <option value="land">Land vacation</option>
+                <option value="">Choose one…</option>
                 <option value="wedding">Wedding travel</option>
                 <option value="senior">Senior travel</option>
                 <option value="accessible">Accessible travel</option>
-                <option value="other">Something else</option>
+                <option value="cruise">Cruise</option>
+                <option value="land">Land vacation</option>
+                <option value="other">Other vacation</option>
               </select>
-              <p class="field-error">Please choose a trip type.</p>
+              <p class="form-error">Please select a trip type.</p>
             </div>
-            <div class="field" data-required>
-              <label for="message">Tell us about the trip</label>
-              <textarea id="message" name="message" required placeholder="Dates, who is going, places you are considering, anything that has to work (mobility, a wedding date, a budget)"></textarea>
-              <p class="field-error">A sentence or two helps us reply with something useful.</p>
+            <div class="form-group" data-required>
+              <label for="message">Tell us about your trip</label>
+              <textarea id="message" name="message" required placeholder="Dates, number of travelers, destinations you’re considering, accessibility needs…"></textarea>
+              <p class="form-error">Please share a few details so we can help.</p>
             </div>
-            <div>
-              <button type="submit" class="btn btn-primary">Send to Faith &amp; Rob</button>
-            </div>
+            <button type="submit" class="btn btn-primary">Send message</button>
           </form>
-          <div class="stack">
-            <div class="aside-contact">
-              <h2>Prefer to talk?</h2>
-              <a class="number" href="tel:+14075080990">407-508-0990</a>
-              <p><a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a></p>
-              <p>Orlando, Florida. We work with travelers nationwide.</p>
-              <p class="note" style="color:rgba(255,255,255,0.7)">Same contact details as Faith’s current <a href="https://travelagentconnection.com/?agent=20050112" rel="noopener noreferrer">Travel Agent Connection</a> profile.</p>
-            </div>
-            <div class="frame frame--4x3">
-              <img src="assets/faith-rob-scarlet-lady.png" alt="Faith and Rob Ericksen dockside beside Scarlet Lady">
-            </div>
+        </div>
+        <div>
+          <div class="media-frame media-frame--aside">
+            <img src="assets/faith-virgin-voyages-cabin.png" alt="Faith Ericksen in a Virgin Voyages cabin">
+          </div>
+          <div class="prose">
+            <h2>Prefer to talk?</h2>
+            <p><a href="tel:+14075080990">407-508-0990</a><br>
+            <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a></p>
+            <p>Same contact info as Faith’s current <a href="https://travelagentconnection.com/?agent=20050112" rel="noopener noreferrer">Travel Agent Connection</a> profile.</p>
+            <p>Service area: Orlando, Florida and travelers nationwide.</p>
           </div>
         </div>
       </div>
     </section>
   </main>
-
   <footer class="site-footer">
-    <div class="col footer-grid">
-      <div class="footer-brand">
+    <div class="footer-inner">
+      <div>
         <h2>Explore Near &amp; Far Travel, LLC</h2>
-        <p>Personal travel advisors in Orlando, Florida, serving travelers nationwide. There is no planning fee — travel partners compensate us when you book.</p>
+        <p>Orlando, Florida<br>Personal travel advisors serving travelers near and far</p>
+      </div>
+      <div>
+        <h2>Connect</h2>
+        <p><a href="tel:+14075080990">407-508-0990</a><br>
+        <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a><br>
+        <a href="plan-your-trip.html">Contact form</a></p>
       </div>
       <div>
         <h2>Travel</h2>
-        <ul>
-          <li><a href="cruises.html">Cruises</a></li>
-          <li><a href="land-vacations.html">Land vacations</a></li>
-          <li><a href="destination-weddings.html">Wedding travel</a></li>
-          <li><a href="senior-travel.html">Senior travel</a></li>
-          <li><a href="accessible-travel.html">Accessible travel</a></li>
-        </ul>
+        <p>
+          <a href="cruises.html">Cruises</a><br>
+          <a href="land-vacations.html">Land vacations</a><br>
+          <a href="destination-weddings.html">Yes to I Do</a><br>
+          <a href="senior-travel.html">Senior travel</a><br>
+          <a href="accessible-travel.html">Accessible travel</a>
+        </p>
       </div>
       <div>
         <h2>The firm</h2>
-        <ul>
-          <li><a href="about.html">About Faith &amp; Rob</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
-          <li><a href="plan-your-trip.html">Plan your trip</a></li>
-          <li><a href="accessibility.html">Accessibility statement</a></li>
-        </ul>
-      </div>
-      <div>
-        <h2>Contact</h2>
-        <ul>
-          <li><a href="tel:+14075080990">407-508-0990</a></li>
-          <li><a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a></li>
-          <li>Orlando, Florida</li>
-        </ul>
+        <p>
+          <a href="about.html">About Faith &amp; Rob</a><br>
+          <a href="reviews.html">Reviews</a><br>
+          <a href="accessibility.html">Accessibility statement</a>
+        </p>
       </div>
     </div>
-    <div class="col footer-bottom">
-      <span>&copy; <span class="js-year"></span> Explore Near &amp; Far Travel, LLC</span>
-      <span>Design mockup for review</span>
-    </div>
+    <p class="footer-bottom">&copy; <span class="js-year"></span> Explore Near &amp; Far Travel, LLC. Mockup site for design review.</p>
   </footer>
-  <div class="call-bar">
-    <a class="btn btn-ghost" href="tel:+14075080990">Call 407-508-0990</a>
-    <a class="btn btn-primary" href="#trip-form">Plan Your Trip</a>
-  </div>
   <script src="js/main.js"></script>
 </body>
 </html>
