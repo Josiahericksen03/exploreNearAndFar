@@ -8,7 +8,7 @@
   <meta name="page-type" content="service">
   <meta name="site-kind" content="other">
   <link rel="icon" href="assets/logo-explore-near-and-far.png" type="image/png">
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=14">
 </head>
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
@@ -35,7 +35,7 @@
           <li><a href="destination-weddings.html">Yes to I Do</a></li>
           <li><a href="senior-travel.html">Senior Travel</a></li>
           <li><a href="accessible-travel.html" aria-current="page">Accessible Travel</a></li>
-          <li><a href="reviews.html">Reviews</a></li>
+          <!-- Deferred Reviews tab (keep for later): <li><a href="reviews.html">Reviews</a></li> -->
           <li><a href="plan-your-trip.html?trip=accessible" class="btn btn-primary btn-nav">Plan Your Trip</a></li>
         </ul>
       </nav>
@@ -43,14 +43,14 @@
   </header>
   <main id="main">
     <div class="page-hero page-hero--video page-hero--video-accessible" aria-hidden="true">
-      <video class="page-hero-video" autoplay muted loop playsinline poster="assets/travel-accessible-wheelchair-outdoors.png">
+      <video class="page-hero-video" autoplay muted loop playsinline preload="auto">
         <source src="assets/hero-accessible.mp4" type="video/mp4">
       </video>
     </div>
     <header class="page-intro">
       <div class="page-intro-inner">
         <h1>Accessible travel</h1>
-        <p class="lead">Mobility, sensory, and medical needs from the first call — not a checkbox after the booking. Faith is an SNG Certified Accessible Travel Advocate.</p>
+        <p class="lead">We plan around you from day one. Mobility, sensory and medical needs are part of our first conversation, not a box we check after you book. Faith’s nursing career and SNG accessible travel certification mean she knows the right questions to ask, and she makes sure they get answered.</p>
       </div>
     </header>
     <section class="paper">
@@ -59,17 +59,21 @@
           <img src="assets/travel-accessible-wheelchair-outdoors.png" alt="Traveler in a wheelchair outdoors near a lake">
         </div>
         <div class="prose">
-          <p>We ask the questions up front: wheelchair dimensions, transfer needs, hearing or vision support, service animals, and what “accessible room” actually means at a given resort or ship.</p>
           <ul class="feature-list">
             <li>Verified accessible cabins on cruises and stateroom locations that work</li>
             <li>Ground transfers that can accommodate scooters or wheelchairs</li>
             <li>Resorts with step-free routes and appropriate bathroom layouts</li>
             <li>Advocacy if a supplier’s “accessible” option does not match reality</li>
           </ul>
-          <div class="cert-row cert-row--start">
-            <img class="badge-sng" src="assets/badge-sng-accessible-travel-advocate.png" alt="SNG Certified Accessible Travel Advocate">
-          </div>
           <p class="actions"><a class="btn btn-primary" href="plan-your-trip.html?trip=accessible">Share your accessibility needs</a></p>
+        </div>
+      </div>
+    </section>
+    <section class="paper paper-deep" aria-labelledby="accessible-cert-heading">
+      <div class="paper-inner cert-partners">
+        <h2 id="accessible-cert-heading" class="cert-partners-title">Accessible travel certification</h2>
+        <div class="cert-row">
+          <img class="badge-sng" src="assets/badge-sng-accessible-travel-advocate-clear.png" alt="SNG Certified Accessible Travel Advocate">
         </div>
       </div>
     </section>
@@ -90,6 +94,12 @@
         <p><a href="tel:+14075080990">407-508-0990</a><br>
         <a href="mailto:explorenearandfartravel@gmail.com">explorenearandfartravel@gmail.com</a><br>
         <a href="plan-your-trip.html">Contact form</a></p>
+        <ul class="footer-social">
+          <li><a href="https://explorenearandfartravel.com" rel="noopener noreferrer">Website</a></li>
+          <li><a href="https://www.instagram.com/explorenearandfartravel/" rel="noopener noreferrer">Instagram</a></li>
+          <li><a href="https://www.facebook.com/explorenearandfartravel" rel="noopener noreferrer">Facebook</a></li>
+          <li><a href="https://www.google.com/search?q=Explore+Near+and+Far+Travel%2C+LLC+reviews" rel="noopener noreferrer">Google reviews</a></li>
+        </ul>
       </div>
       <div>
         <h2>Travel</h2>
@@ -105,10 +115,16 @@
         <h2>The firm</h2>
         <p>
           <a href="about.html">About Faith &amp; Rob</a><br>
-          <a href="reviews.html">Reviews</a><br>
+          <!-- Deferred: <a href="reviews.html">Reviews</a><br> -->
           <a href="accessibility.html">Accessibility statement</a>
         </p>
       </div>
+    </div>
+    <div class="footer-follow">
+      <a class="footer-qr" href="https://www.facebook.com/explorenearandfartravel" rel="noopener noreferrer">
+        <img src="assets/qr-facebook.png" width="120" height="120" alt="QR code linking to Explore Near and Far Travel on Facebook">
+        <span>Scan to find us on Facebook</span>
+      </a>
     </div>
     <p class="footer-bottom">&copy; <span class="js-year"></span> Explore Near &amp; Far Travel, LLC. Mockup site for design review.</p>
   </footer>

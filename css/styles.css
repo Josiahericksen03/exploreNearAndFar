@@ -1,8 +1,8 @@
 /* Explore Near & Far — Advisor Planning Folio
    World: navy embarkation cloth, cream paper inserts, teal tabs, orange action tab only.
-   Type: Source Serif 4 display + Atkinson Hyperlegible body (senior/accessible readable). */
+   Type: Source Serif 4 display + Atkinson Hyperlegible body; Source Sans 3 for numerals. */
 
-@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400;1,700&family=Source+Sans+3:wght@400;600;700&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600;8..60,700&display=swap");
 
 :root {
   --navy: #163d5a;
@@ -25,6 +25,7 @@
   --cloth: var(--navy);
   --font-body: "Atkinson Hyperlegible", "Segoe UI", system-ui, sans-serif;
   --font-display: "Source Serif 4", "Iowan Old Style", Georgia, serif;
+  --font-numerals: "Source Sans 3", "Segoe UI", system-ui, sans-serif;
   --max: 74rem;
   --edge: clamp(1.25rem, 4vw, 2.75rem);
   --radius: 0.2rem;
@@ -362,7 +363,7 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 28%;
+  object-position: center 32%;
   transform: scale(1.04);
 }
 
@@ -385,22 +386,44 @@ a:hover {
   width: 100%;
 }
 
+.embark-logo {
+  display: block;
+  width: clamp(5.5rem, 12vw, 7.5rem);
+  height: clamp(5.5rem, 12vw, 7.5rem);
+  margin: 0 0 1rem;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow:
+    0 0 0 2px color-mix(in srgb, var(--gold) 55%, transparent),
+    0 10px 24px rgba(15, 42, 63, 0.45);
+}
+
 .embark-brand {
   font-family: var(--font-display);
   font-size: clamp(2.8rem, 7.5vw, 5.4rem);
   font-weight: 600;
   line-height: 0.98;
   letter-spacing: -0.035em;
-  margin: 0 0 1.1rem;
+  margin: 0 0 0.75rem;
   max-width: 12ch;
   text-wrap: balance;
 }
 
+.embark-tagline {
+  margin: 0 0 0.85rem;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2.4vw, 1.55rem);
+  font-weight: 600;
+  line-height: 1.3;
+  max-width: 28ch;
+  color: var(--cream);
+}
+
 .embark-lead {
-  margin: 0 0 0.5rem;
-  font-size: clamp(1.15rem, 2.2vw, 1.4rem);
-  max-width: 34ch;
-  line-height: 1.45;
+  margin: 0 0 0.75rem;
+  font-size: clamp(1.05rem, 1.9vw, 1.2rem);
+  max-width: 42ch;
+  line-height: 1.5;
   color: color-mix(in srgb, var(--cream) 92%, transparent);
 }
 
@@ -409,6 +432,8 @@ a:hover {
   font-size: 1rem;
   color: var(--gold);
   font-weight: 700;
+  max-width: 42ch;
+  line-height: 1.4;
 }
 
 .embark-actions {
@@ -604,11 +629,12 @@ a.spread {
   }
 }
 
-/* Pane grid — three unequal panes, not equal cards */
+/* Pane grid — three equal panes */
 .pane-grid {
   display: grid;
-  grid-template-columns: 1.35fr 1fr 1fr;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1rem;
+  align-items: stretch;
 }
 
 .pane {
@@ -617,6 +643,7 @@ a.spread {
   text-decoration: none;
   color: inherit;
   min-height: 22rem;
+  height: 100%;
   overflow: hidden;
   background: var(--navy-deep);
   border: 1px solid var(--line);
@@ -681,6 +708,7 @@ a.spread {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center 22%;
   transition: transform 480ms var(--ease-out);
 }
 
@@ -705,6 +733,35 @@ a.spread {
 
 .media-grid-3 .media-frame {
   aspect-ratio: 4 / 3;
+}
+
+/* Phone / address numerals — cleaner lining figures; letters stay Atkinson */
+a[href^="tel"],
+.header-contact a[href^="tel"],
+.site-footer a[href^="tel"],
+.js-year,
+.numeral {
+  font-family: var(--font-numerals);
+  font-variant-numeric: lining-nums tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.photo-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.75rem;
+  margin-top: 1.25rem;
+}
+
+.photo-gallery .media-frame {
+  margin: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.photo-gallery .media-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 @media (hover: hover) and (pointer: fine) {
@@ -828,7 +885,8 @@ a.spread {
 }
 
 .cert-row img.badge-sng {
-  max-height: 7rem;
+  max-height: 4.25rem;
+  background: transparent;
 }
 
 .badge-row {
@@ -891,10 +949,22 @@ a.spread {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 46%;
-  transform: scale(1.38);
-  transform-origin: center 46%;
+  object-position: center center;
+  transform: scale(1.06);
+  transform-origin: center center;
   pointer-events: none;
+  opacity: 0;
+  transition: opacity 280ms ease;
+  background: var(--navy-deep);
+}
+
+.page-hero-video.is-ready {
+  opacity: 1;
+}
+
+.page-hero--video-accessible .page-hero-video {
+  object-position: center 35%;
+  transform: scale(1.02);
 }
 
 .page-hero--photo {
@@ -930,9 +1000,10 @@ a.spread {
 
 .page-hero--about {
   background-image:
-    linear-gradient(180deg, rgba(15, 42, 63, 0.25), rgba(15, 42, 63, 0.88)),
-    url("../assets/faith-rob-scarlet-lady.png");
-  background-position: center, center 42%;
+    linear-gradient(180deg, rgba(15, 42, 63, 0.28), rgba(15, 42, 63, 0.82)),
+    url("../assets/photos/about-header-amalfi.jpg");
+  background-position: center, center 40%;
+  background-size: cover, cover;
 }
 
 .page-hero--reviews {
@@ -1182,6 +1253,134 @@ a.spread {
 
 .reviews-scroll .review-slide cite {
   font-size: clamp(0.9375rem, 1.6vw, 1.0625rem);
+}
+
+.media-frame--caption {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  aspect-ratio: auto;
+  overflow: visible;
+  background: transparent;
+  border: 0;
+}
+
+.media-frame--caption img {
+  aspect-ratio: 4 / 3;
+  border: 1px solid var(--line);
+  background: var(--navy-deep);
+}
+
+.media-frame--caption figcaption {
+  margin: 0;
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--teal-ink);
+  letter-spacing: 0.02em;
+}
+
+.media-frame--caption figcaption strong {
+  display: block;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 0.2rem;
+}
+
+.media-frame--caption figcaption span {
+  display: block;
+  font-weight: 400;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  letter-spacing: 0;
+  color: var(--muted);
+}
+
+/* Cruises — Viking kinds block */
+.cruise-kinds .section-intro {
+  margin-bottom: 1.25rem;
+  max-width: 56ch;
+}
+
+.cruise-kinds-grid {
+  gap: 1rem 1.15rem;
+}
+
+.cruise-kinds-grid .media-frame--caption {
+  gap: 0.5rem;
+}
+
+.cruise-kinds-grid .media-frame--caption img {
+  aspect-ratio: 3 / 2;
+}
+
+/* Cruises story — copy left, photos stacked right */
+.cruise-story .section-intro {
+  margin-bottom: 1rem;
+  max-width: none;
+  color: var(--navy);
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: clamp(1.05rem, 2vw, 1.2rem);
+}
+
+.cruise-story .prose h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: 1.5rem 0 0.5rem;
+}
+
+.cruise-story-media {
+  gap: 0.85rem;
+}
+
+.cruise-story-media .media-frame {
+  aspect-ratio: 4 / 3;
+}
+
+/* About — Our Promise */
+.promise-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(1.5rem, 4vw, 2.75rem);
+  margin-top: 1.5rem;
+}
+
+.promise-item h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.35rem, 2.4vw, 1.7rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--navy);
+  margin: 0 0 0.55rem;
+}
+
+.promise-item p {
+  margin: 0;
+  color: var(--ink-soft);
+  line-height: 1.55;
+  max-width: 36ch;
+}
+
+.wedding-grow {
+  margin: 2rem 0 0;
+  max-width: 62ch;
+  color: var(--ink-soft);
+  line-height: 1.55;
+}
+
+.feature-list strong {
+  color: var(--navy);
+  font-weight: 700;
+}
+
+@media (max-width: 960px) {
+  .promise-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1471,7 +1670,7 @@ a.spread {
 
 @media (min-width: 960px) {
   .footer-inner {
-    grid-template-columns: 1.35fr 1.1fr 0.9fr 0.9fr;
+    grid-template-columns: 1.35fr 1.15fr 0.9fr 0.9fr;
   }
 }
 
@@ -1494,11 +1693,63 @@ a.spread {
   letter-spacing: 0.02em;
 }
 
+.footer-social {
+  list-style: none;
+  margin: 1rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.footer-social a {
+  font-size: 0.9375rem;
+}
+
+.footer-follow {
+  max-width: var(--max);
+  margin: 2.25rem auto 0;
+  padding-top: 1.5rem;
+  border-top: 1px solid color-mix(in srgb, var(--cream) 14%, transparent);
+  display: flex;
+  justify-content: center;
+}
+
+.footer-qr {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+  color: color-mix(in srgb, var(--cream) 88%, transparent);
+  text-decoration: none;
+  text-align: center;
+}
+
+.footer-qr img {
+  display: block;
+  width: 7rem;
+  height: 7rem;
+  border: 1px solid color-mix(in srgb, var(--cream) 18%, transparent);
+  background: var(--cream);
+}
+
+.footer-qr span {
+  font-size: 0.8125rem;
+  line-height: 1.35;
+  color: color-mix(in srgb, var(--cream) 70%, transparent);
+}
+
+.footer-qr:hover {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+.footer-qr:hover span {
+  color: var(--gold);
+}
+
 .footer-bottom {
   max-width: var(--max);
-  margin: 2.5rem auto 0;
-  padding-top: 1.35rem;
-  border-top: 1px solid color-mix(in srgb, var(--cream) 14%, transparent);
+  margin: 1.25rem auto 0;
   text-align: center;
   font-size: 0.8125rem;
   color: color-mix(in srgb, var(--cream) 52%, transparent);

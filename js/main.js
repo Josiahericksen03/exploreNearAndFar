@@ -13,6 +13,23 @@
     });
   }
 
+  /* Hero videos: fade in only after frames are ready (avoids poster flash). */
+  document.querySelectorAll(".page-hero-video").forEach(function (video) {
+    var markReady = function () {
+      video.classList.add("is-ready");
+    };
+    if (video.readyState >= 2) {
+      markReady();
+    } else {
+      video.addEventListener("loadeddata", markReady, { once: true });
+      video.addEventListener("playing", markReady, { once: true });
+    }
+    var playPromise = video.play();
+    if (playPromise && typeof playPromise.catch === "function") {
+      playPromise.catch(function () {});
+    }
+  });
+
   /* Home: draw the route once when it scrolls into view. */
   var route = document.querySelector(".route");
   if (route) {
