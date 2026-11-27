@@ -111,16 +111,6 @@ a:hover {
   border: 0;
 }
 
-.mockup-banner {
-  background: var(--navy-deep);
-  color: color-mix(in srgb, var(--cream) 72%, transparent);
-  text-align: center;
-  padding: 0.4rem var(--edge);
-  font-size: 0.75rem;
-  letter-spacing: 0.02em;
-  margin: 0;
-}
-
 /* ——— Site chrome: embarks over the photo ——— */
 .site-header {
   position: sticky;
@@ -363,8 +353,9 @@ a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 32%;
-  transform: scale(1.04);
+  /* Couple sits bottom-right — keep faces/chin in frame */
+  object-position: 82% 78%;
+  transform: scale(1.02);
 }
 
 .embark::after {
@@ -428,12 +419,17 @@ a:hover {
 }
 
 .embark-fact {
-  margin: 0 0 2rem;
+  margin: 0 0 0.35rem;
   font-size: 1rem;
   color: var(--gold);
   font-weight: 700;
   max-width: 42ch;
   line-height: 1.4;
+}
+
+.embark-fact + .embark-fact {
+  margin-bottom: 2rem;
+  font-weight: 600;
 }
 
 .embark-actions {
@@ -873,6 +869,7 @@ a[href^="tel"],
   max-height: 5.5rem;
   width: auto;
   object-fit: contain;
+  background: transparent;
 }
 
 .cert-row img.badge-commodore {
@@ -887,6 +884,12 @@ a[href^="tel"],
 .cert-row img.badge-sng {
   max-height: 4.25rem;
   background: transparent;
+}
+
+.cert-row img.badge-royal-wide {
+  max-height: 2.75rem;
+  width: auto;
+  max-width: 14rem;
 }
 
 .badge-row {
@@ -1103,6 +1106,43 @@ a[href^="tel"],
   font-size: 0.95rem;
 }
 
+.form-group legend {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 0.35rem;
+  color: var(--ink);
+  font-size: 0.95rem;
+  padding: 0;
+}
+
+.form-hint {
+  margin: 0 0 0.65rem;
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.form-group--checks {
+  border: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.check-option {
+  display: flex !important;
+  align-items: center;
+  gap: 0.55rem;
+  font-weight: 500 !important;
+  margin: 0 0 0.45rem !important;
+  cursor: pointer;
+}
+
+.check-option input {
+  width: auto !important;
+  min-height: 0 !important;
+  margin: 0;
+  accent-color: var(--navy);
+}
+
 .form-group input,
 .form-group select,
 .form-group textarea {
@@ -1151,7 +1191,13 @@ a[href^="tel"],
 
 .media-frame--aside {
   margin-bottom: 1.5rem;
-  aspect-ratio: 4 / 3;
+  aspect-ratio: 3 / 4;
+  max-width: 18rem;
+  max-height: 22rem;
+}
+
+.media-frame--aside img {
+  object-position: center 72%;
 }
 
 /* Reviews scroller — sticky top synced to header height in JS */

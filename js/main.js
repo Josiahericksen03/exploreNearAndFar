@@ -68,24 +68,42 @@
     }
   }
 
-  var tripSelect = document.getElementById("trip-type");
-  var tripParam = null;
-  if (tripSelect) {
-    tripParam = new URLSearchParams(window.location.search).get("trip");
-    if (tripParam && tripSelect.querySelector('option[value="' + tripParam + '"]')) {
-      tripSelect.value = tripParam;
-    }
+  var tripParam = new URLSearchParams(window.location.search).get("trip");
+  var tripChecks = document.querySelectorAll('input[name="trip-type"][type="checkbox"]');
+  if (tripParam && tripChecks.length) {
+    tripChecks.forEach(function (box) {
+      if (box.value === tripParam) box.checked = true;
+    });
   }
 
   var form = document.getElementById("trip-form");
   if (!form) return;
 
+  var tripLabels = {
+    wedding: "Wedding travel",
+    senior: "Senior travel",
+    accessible: "Accessible travel",
+    cruise: "Cruise",
+    land: "Land vacation",
+    other: "Other vacation",
+  };
+
   form.addEventListener("submit", function (event) {
     event.preventDefault();
     var valid = true;
-    form.querySelectorAll(".field[data-required]").forEach(function (group) {
+    form.querySelectorAll(".form-group[data-required]").forEach(function (group) {
+      if (group.hasAttribute("data-trip-types")) {
+        var any = group.querySelectorAll('input[type="checkbox"]:checked').length > 0;
+        if (!any) {
+          group.classList.add("invalid");
+          valid = false;
+        } else {
+          group.classList.remove("invalid");
+        }
+        return;
+      }
       var input = group.querySelector("input, select, textarea");
-      if (!input || !input.value.trim()) {
+      if (!input || !String(input.value || "").trim()) {
         group.classList.add("invalid");
         valid = false;
       } else {
@@ -100,14 +118,46 @@
       }
       return;
     }
+
+    var name = (form.querySelector("#name") || {}).value || "";
+    var email = (form.querySelector("#email") || {}).value || "";
+    var phone = (form.querySelector("#phone") || {}).value || "";
+    var message = (form.querySelector("#message") || {}).value || "";
+    var selected = Array.prototype.slice
+      .call(form.querySelectorAll('input[name="trip-type"]:checked'))
+      .map(function (box) {
+        return tripLabels[box.value] || box.value;
+      });
+
+    var body =
+      "Name: " +
+      name.trim() +
+      "\n" +
+      "Email: " +
+      email.trim() +
+      "\n" +
+      "Phone: " +
+      (phone.trim() || "(not provided)") +
+      "\n" +
+      "Interested in: " +
+      selected.join(", ") +
+      "\n\n" +
+      "Message:\n" +
+      message.trim();
+
+    var mailto =
+      "mailto:explorenearandfartravel@gmail.com" +
+      "?subject=" +
+      encodeURIComponent("Trip inquiry from " + name.trim()) +
+      "&body=" +
+      encodeURIComponent(body);
+
+    window.location.href = mailto;
+
     if (status) {
       status.textContent =
-        "Thank you. This is a design mockup, so nothing was sent — on the live site Faith or Rob replies within one business day.";
+        "Opening your email to explorenearandfartravel@gmail.com with your message and selected trip types. If nothing opens, email us directly.";
       status.focus();
-    }
-    form.reset();
-    if (tripSelect && tripParam && tripSelect.querySelector('option[value="' + tripParam + '"]')) {
-      tripSelect.value = tripParam;
     }
   });
 })();

@@ -8,94 +8,166 @@
 
   var DESTINATIONS = [
     {
+      id: "frankfurt",
+      name: "Frankfurt",
+      kind: "explored",
+      lat: 50.1109,
+      lng: 8.6821,
+      image: "assets/photos/map/frankfurt.jpg",
+      blurb: "Gateway days in Germany — city walks and the start of river itineraries we’ve taken ourselves.",
+    },
+    {
+      id: "nuremberg",
+      name: "Nuremberg",
+      kind: "explored",
+      lat: 49.4529,
+      lng: 11.0765,
+      image: "assets/photos/map/nuremberg.jpg",
+      blurb: "Old Town lanes and castle views from our own travels through Bavaria.",
+    },
+    {
+      id: "linz",
+      name: "Linz",
+      kind: "explored",
+      lat: 48.3069,
+      lng: 14.2858,
+      image: "assets/photos/map/linz.jpg",
+      blurb: "A Danube stop we’ve walked ourselves — quieter streets and an easy Austrian pace.",
+    },
+    {
+      id: "vienna",
+      name: "Vienna",
+      kind: "explored",
+      lat: 48.2082,
+      lng: 16.3738,
+      image: "assets/photos/map/vienna.jpg",
+      blurb: "Looking out over Stephansplatz — a Vienna city day from trips we’ve taken ourselves.",
+    },
+    {
+      id: "bratislava",
+      name: "Bratislava",
+      kind: "explored",
+      lat: 48.1429,
+      lng: 17.1089,
+      image: "assets/photos/map/bratislava.jpg",
+      blurb: "Čumil, the famous “man at work” statue — a Bratislava street stop from our own travels.",
+    },
+    {
       id: "budapest",
       name: "Budapest",
       kind: "explored",
-      lat: 47.4979,
-      lng: 19.0402,
-      image: "assets/photos/image01.jpg",
+      lat: 47.5021,
+      lng: 19.035,
+      image: "assets/photos/map/budapest.jpg",
       blurb: "Fisherman’s Bastion views and Danube evenings from our own travels through Hungary.",
     },
     {
-      id: "barcelona",
-      name: "Barcelona",
+      id: "blaskogabyggd",
+      name: "Bláskógabyggð",
       kind: "explored",
-      lat: 41.3874,
-      lng: 2.1686,
-      image: "assets/photos/image05.jpg",
-      blurb: "Sagrada Família, neighborhood walks, and the kind of city pacing we love to plan.",
+      lat: 64.259,
+      lng: -20.35,
+      image: "assets/photos/map/blaskogabyggd.jpg",
+      blurb: "Golden Circle country — geysers, waterfalls, and open Icelandic landscape we’ve explored firsthand.",
     },
     {
-      id: "venice",
-      name: "Venice",
+      id: "reykjavik",
+      name: "Reykjavík",
       kind: "explored",
-      lat: 45.4408,
-      lng: 12.3155,
-      image: "assets/photos/image18.jpg",
-      blurb: "Canal days and gondola evenings we’ve experienced firsthand and share with clients.",
+      lat: 64.1466,
+      lng: -21.9426,
+      image: "assets/photos/map/reykjavik.jpg",
+      blurb: "Harbor walks, local food, and the base for scenic road trips we’ve taken in Iceland.",
     },
     {
-      id: "paris",
-      name: "Paris",
+      id: "isafjordur",
+      name: "Ísafjörður",
       kind: "explored",
-      lat: 48.8566,
-      lng: 2.3522,
-      image: "assets/photos/image07.jpg",
-      blurb: "Landmark evenings and neighborhood meals from trips we’ve taken together.",
+      lat: 66.0625,
+      lng: -23.2074,
+      image: "assets/photos/map/isafjordur.jpg",
+      blurb: "Westfjords scenery and a quieter Icelandic port stop from our own sailing days.",
     },
     {
-      id: "malaga",
-      name: "Málaga",
+      id: "akureyri",
+      name: "Akureyri",
       kind: "explored",
-      lat: 36.7213,
-      lng: -4.4214,
-      image: "assets/photos/image03.jpg",
-      blurb: "Rooftop views over cathedral towers and a slower Spanish coastal pace.",
+      lat: 65.6835,
+      lng: -18.1002,
+      image: "assets/photos/map/akureyri.jpg",
+      blurb: "Northern Iceland’s capital — fjord views and day trips we’ve experienced ourselves.",
     },
     {
-      id: "bahamas",
-      name: "Bimini &amp; Nassau",
-      kind: "both",
-      lat: 25.0667,
-      lng: -77.3333,
-      image: "assets/photos/image02.jpg",
-      blurb: "Beach-club days and Virgin Voyages sailings we’ve taken and booked for travelers.",
+      id: "castlerock",
+      name: "Castlerock, Northern Ireland",
+      kind: "explored",
+      lat: 55.164,
+      lng: -6.785,
+      image: "assets/photos/map/castlerock.jpg",
+      blurb: "A stop at Tucker’s Inn in Castlerock — coastal Northern Ireland from our own travels.",
+    },
+    {
+      id: "edinburgh",
+      name: "Edinburgh",
+      kind: "explored",
+      lat: 55.9533,
+      lng: -3.1883,
+      image: "assets/photos/map/edinburgh.jpg",
+      blurb: "Castle rock, Royal Mile walks, and neighborhood meals from trips we’ve taken together.",
     },
     {
       id: "amsterdam",
       name: "Amsterdam",
-      kind: "both",
-      lat: 52.3676,
-      lng: 4.9041,
-      image: "assets/destination-amsterdam-tulips.png",
-      blurb: "Neighborhood walks, tulip season timing, and canal-side stays we’ve enjoyed and planned.",
-    },
-    {
-      id: "mediterranean",
-      name: "French Riviera",
-      kind: "planned",
-      lat: 43.7384,
-      lng: 7.4246,
-      image: "assets/destination-monte-carlo-harbor.png",
-      blurb: "Harbor stays and coastal cruise embarkations planned for clients seeking a polished Mediterranean week.",
-    },
-    {
-      id: "niagara",
-      name: "Niagara Falls",
       kind: "explored",
-      lat: 43.0962,
-      lng: -79.0377,
-      image: "assets/destination-niagara-falls.png",
-      blurb: "A classic near-and-far getaway we’ve walked ourselves — mist, viewpoints, and an easy pace.",
+      lat: 52.3784,
+      lng: 4.8988,
+      image: "assets/photos/map/amsterdam.jpg",
+      blurb: "Canal-side stays and neighborhood walks we’ve enjoyed and love to plan for others.",
     },
     {
-      id: "antarctica",
-      name: "Antarctic waters",
+      id: "portsmouth",
+      name: "Portsmouth",
+      kind: "explored",
+      lat: 50.794,
+      lng: -1.1046,
+      image: "assets/photos/map/portsmouth.jpg",
+      blurb: "Harbor history and English seaside days from our own UK travels.",
+    },
+    {
+      id: "detroit",
+      name: "Detroit",
+      kind: "explored",
+      lat: 42.3314,
+      lng: -83.0458,
+      image: "assets/photos/map/detroit.jpg",
+      blurb: "A Detroit city day from our own travels — neighborhoods and landmarks up close.",
+    },
+    {
+      id: "cleveland",
+      name: "Cleveland",
+      kind: "explored",
+      lat: 41.4993,
+      lng: -81.6944,
+      image: "assets/photos/map/cleveland.jpg",
+      blurb: "Lake Erie days and downtown exploring from our own Midwest travels.",
+    },
+    {
+      id: "solola",
+      name: "Sololá, Guatemala",
       kind: "planned",
-      lat: -64.85,
-      lng: -62.9,
-      image: "assets/cruise-viking-expedition-antarctica.png",
-      blurb: "Expedition cruise planning for clients — cabin fit, pacing, and what the voyage really asks of you.",
+      lat: 14.7729,
+      lng: -91.1832,
+      image: "assets/photos/map/solola.jpg",
+      blurb: "A client journey we planned — highland towns, markets, and travel details handled end to end.",
+    },
+    {
+      id: "savannah",
+      name: "Savannah",
+      kind: "explored",
+      lat: 32.0809,
+      lng: -81.0912,
+      image: "assets/photos/map/savannah.jpg",
+      blurb: "Square-by-square walks and Southern evenings from a trip we’ve taken ourselves.",
     },
   ];
 
@@ -164,7 +236,7 @@
 
   function buildMap(root) {
     var preview = root.getAttribute("data-travel-map") === "preview";
-    var pins = preview ? DESTINATIONS.slice(0, 4) : DESTINATIONS;
+    var pins = preview ? DESTINATIONS.slice(0, 6) : DESTINATIONS;
 
     root.innerHTML = "";
     var canvas = document.createElement("div");
@@ -222,19 +294,14 @@
     });
 
     if (bounds.length) {
-      /* Keep the first view on the main travel belt; Antarctica stays on the map if you pan/zoom. */
-      var focus = bounds.filter(function (pair) {
-        return pair[0] > -40;
-      });
-      map.fitBounds(focus.length ? focus : bounds, {
+      map.fitBounds(bounds, {
         padding: preview ? [36, 36] : [56, 56],
-        maxZoom: preview ? 3 : 3,
+        maxZoom: preview ? 3 : 4,
       });
     } else {
       map.setView([28, -40], 2);
     }
 
-    /* Leaflet needs a resize pass after sticky/layout settles. */
     setTimeout(function () {
       map.invalidateSize();
     }, 80);
